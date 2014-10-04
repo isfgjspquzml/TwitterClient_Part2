@@ -8,19 +8,7 @@
 
 import UIKit
 
-//class ViewController: UIViewController {
-//    var viewControllers: [UIViewController] = [ProfileViewController(nibName: nil, bundle: nil), FeedViewController(nibName: nil, bundle: nil)]
-//}
-//
-//class ProfileViewController: UIViewController {
-//    override func loadView() {
-//        self.view = UIView(frame: CGRectZero)
-//        self.view.backgroundColor = UIColor.lightGrayColor();
-//    }
-//}
-
 class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-//    let client: TwitterClient = TwitterClient()
     
     @IBOutlet weak var feedTableView: UITableView!
     @IBOutlet weak var behindTintImageView: UIImageView!
@@ -30,11 +18,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func loadView() {
         super.loadView()
-//        self.view = UIView(frame: CGRectZero)
-//        self.view.backgroundColor = UIColor.whiteColor()
         
         TwitterClient.client.feedViewController = self
-        TwitterClient.client.getAccount()
         
         dateFormater.setLocalizedDateFormatFromTemplate("MMM d, h:mm a")
         refreshControl = UIRefreshControl()

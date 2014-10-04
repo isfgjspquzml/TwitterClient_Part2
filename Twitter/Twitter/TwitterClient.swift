@@ -63,6 +63,7 @@ class TwitterClient: NSObject {
         let task = self.urlSession.dataTaskWithRequest(request, completionHandler: { (data, response, error) in
             if error != nil {
                 NSLog("Error getting user credentials")
+                println(response)
             } else {
                 let userInfo = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary
                 self.user = User(dictionary: userInfo)
@@ -82,6 +83,7 @@ class TwitterClient: NSObject {
         let task = self.urlSession.dataTaskWithRequest(request, completionHandler: { (data, response, error) in
             if error != nil {
                 NSLog("Error getting timeline")
+                println(response)
             } else {
                 let array = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSArray
                 var statusArray:[Status] = Array()

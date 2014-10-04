@@ -24,6 +24,9 @@
 		89D6879219D73B4E001FC19A /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D6879119D73B4E001FC19A /* ComposeViewController.swift */; };
 		89D6879519D73C00001FC19A /* behind_alert_view.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D6879419D73C00001FC19A /* behind_alert_view.png */; };
 		89D6879719D79F74001FC19A /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D6879619D79F74001FC19A /* TweetViewController.swift */; };
+		89D687D019E0A88E001FC19A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D687CF19E0A88E001FC19A /* ProfileViewController.swift */; };
+		89D687D219E0A8A1001FC19A /* MentionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D687D119E0A8A1001FC19A /* MentionsViewController.swift */; };
+		89D687D419E0A912001FC19A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D687D319E0A912001FC19A /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,9 @@
 		89D6879119D73B4E001FC19A /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		89D6879419D73C00001FC19A /* behind_alert_view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = behind_alert_view.png; path = ../../../../Desktop/behind_alert_view.png; sourceTree = "<group>"; };
 		89D6879619D79F74001FC19A /* TweetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetViewController.swift; sourceTree = "<group>"; };
+		89D687CF19E0A88E001FC19A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		89D687D119E0A8A1001FC19A /* MentionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentionsViewController.swift; sourceTree = "<group>"; };
+		89D687D319E0A912001FC19A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8B527A5ECF3F4BA6A90E71AA /* libPods-Twitter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Twitter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5A670D870E432A947B3EC2 /* Pods-Twitter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter.xcconfig"; path = "Pods/Pods-Twitter.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,10 +109,13 @@
 		89494DB919D72A730054B5FE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				89D687D319E0A912001FC19A /* HomeViewController.swift */,
 				89D6879119D73B4E001FC19A /* ComposeViewController.swift */,
 				89494DAE19D545A80054B5FE /* FeedViewController.swift */,
 				8987665B19D3C1AD004F42C9 /* StatusTableViewCell.swift */,
 				89D6879619D79F74001FC19A /* TweetViewController.swift */,
+				89D687CF19E0A88E001FC19A /* ProfileViewController.swift */,
+				89D687D119E0A8A1001FC19A /* MentionsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -331,9 +340,12 @@
 			files = (
 				8987665C19D3C1AD004F42C9 /* StatusTableViewCell.swift in Sources */,
 				8987663819D3BA6C004F42C9 /* AppDelegate.swift in Sources */,
+				89D687D019E0A88E001FC19A /* ProfileViewController.swift in Sources */,
 				8987666219D543EC004F42C9 /* TwitterClient.swift in Sources */,
+				89D687D219E0A8A1001FC19A /* MentionsViewController.swift in Sources */,
 				8987665E19D3C3A3004F42C9 /* Status.swift in Sources */,
 				89D6879719D79F74001FC19A /* TweetViewController.swift in Sources */,
+				89D687D419E0A912001FC19A /* HomeViewController.swift in Sources */,
 				89494DAF19D545A80054B5FE /* FeedViewController.swift in Sources */,
 				89494DB819D72A1D0054B5FE /* User.swift in Sources */,
 				89D6879219D73B4E001FC19A /* ComposeViewController.swift in Sources */,
