@@ -8,6 +8,17 @@
 
 import UIKit
 
+//class ViewController: UIViewController {
+//    var viewControllers: [UIViewController] = [ProfileViewController(nibName: nil, bundle: nil), FeedViewController(nibName: nil, bundle: nil)]
+//}
+//
+//class ProfileViewController: UIViewController {
+//    override func loadView() {
+//        self.view = UIView(frame: CGRectZero)
+//        self.view.backgroundColor = UIColor.lightGrayColor();
+//    }
+//}
+
 class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 //    let client: TwitterClient = TwitterClient()
     
@@ -17,8 +28,11 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let dateFormater = NSDateFormatter()
     var refreshControl: UIRefreshControl?
     
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    override func loadView() {
+        super.loadView()
+//        self.view = UIView(frame: CGRectZero)
+//        self.view.backgroundColor = UIColor.whiteColor()
+        
         TwitterClient.client.feedViewController = self
         TwitterClient.client.getAccount()
         

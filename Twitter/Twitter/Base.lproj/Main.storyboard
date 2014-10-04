@@ -114,7 +114,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="behind_alert_view.png" translatesAutoresizingMaskIntoConstraints="NO" id="Win-Gy-aiJ">
-                                <rect key="frame" x="-16" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
                                 </accessibility>
@@ -140,7 +140,7 @@
                             <constraint firstItem="sbO-jG-TNv" firstAttribute="leading" secondItem="gq4-Eg-7uc" secondAttribute="trailing" constant="8" id="QnJ-On-bdn"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="s95-Wq-1zg" secondAttribute="trailing" constant="20" id="Qqw-Nm-62X"/>
                             <constraint firstItem="s95-Wq-1zg" firstAttribute="leading" secondItem="adQ-bb-L98" secondAttribute="trailing" constant="8" id="RFd-aG-iIf"/>
-                            <constraint firstAttribute="centerX" secondItem="Win-Gy-aiJ" secondAttribute="centerX" constant="16" id="SKj-D3-dfl"/>
+                            <constraint firstAttribute="centerX" secondItem="Win-Gy-aiJ" secondAttribute="centerX" id="SKj-D3-dfl"/>
                             <constraint firstItem="gq4-Eg-7uc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Bcq-xG-LbP" secondAttribute="bottom" constant="8" id="Tuh-me-fTf"/>
                             <constraint firstItem="adQ-bb-L98" firstAttribute="width" secondItem="adQ-bb-L98" secondAttribute="height" multiplier="1:1" id="VTM-a0-K2q"/>
                             <constraint firstItem="uhY-kJ-sot" firstAttribute="leading" secondItem="adQ-bb-L98" secondAttribute="trailing" constant="8" id="VjW-pO-1kh"/>
@@ -306,12 +306,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="behindTintImageView" destination="6Ib-ET-ojA" id="Ws6-Qq-bc2"/>
-                        <outlet property="feedTableView" destination="b9r-Aj-vPk" id="JPq-rn-roN"/>
+                        <outlet property="feedTableView" destination="b9r-Aj-vPk" id="u5L-bS-aVR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="946" y="-557"/>
+            <point key="canvasLocation" x="971" y="-623"/>
         </scene>
         <!--Compose View Controller-->
         <scene sceneID="aEB-9V-Yu9">
@@ -358,7 +358,10 @@
                                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="700" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LcX-ee-d8b">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="700" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LcX-ee-d8b">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="bnc-sf-QaE"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
