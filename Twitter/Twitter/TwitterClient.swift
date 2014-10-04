@@ -93,7 +93,9 @@ class TwitterClient: NSObject {
                 }
                 dispatch_async(dispatch_get_main_queue(), {
                     self.statuses = statusArray
-                    self.feedViewController.feedTableView.reloadData()
+                    if let feedCtrl = self.feedViewController {
+                        feedCtrl.feedTableView.reloadData()
+                    }
                 })
             }
         })
