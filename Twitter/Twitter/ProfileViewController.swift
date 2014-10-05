@@ -24,8 +24,15 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let user = TwitterClient.client.user!
+        TwitterClient.client.profileViewController = self
         
+        if let user = TwitterClient.client.user {
+            reload()
+        }
+    }
+    
+    func reload() {
+        let user = TwitterClient.client.user!
         backgroundImageView.image = TwitterClient.client.user!.profileBackgroundImage
         profileImageView.image = user.profileImage
         nameLabel.text = user.name

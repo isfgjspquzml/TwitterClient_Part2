@@ -25,10 +25,16 @@ class User: NSObject {
         self.username = dictionary["screen_name"] as? String
         self.location = dictionary["location"] as? String
         self.tagLine = dictionary["description"] as? String ?? ""
-        self.favoritesCount = dictionary["favorite_count"] as? String ?? ""
-        self.retweetCount = dictionary["retweet_count"] as? String ?? ""
-        self.followersCount = dictionary["friends_count"] as? String ?? ""
-        self.following = dictionary["following"] as? String ?? ""
+        
+//        println(dictionary["status"]!)
+//        var s = dictionary["status"]!["favorite_count"]! as? String
+        println(String(dictionary["status"]!["favorite_count"]! as Int))
+
+        
+        self.favoritesCount = "FAVORITES: " + (String(dictionary["status"]!["favorite_count"]! as Int) ?? "")
+        self.retweetCount = "RETWEETS: " + (String(dictionary["status"]!["retweet_count"]! as Int) ?? "")
+        self.followersCount = "FOLLOWERS: " + (String(dictionary["friends_count"]! as Int) ?? "")
+        self.following = "FOLLOWING: " + (String(dictionary["following"] as Int) ?? "")
         
         let profileURL = dictionary["profile_image_url"] as? String ?? ""
         let imageRequest = NSURL.URLWithString(profileURL)

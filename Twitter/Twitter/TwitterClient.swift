@@ -22,8 +22,9 @@ class TwitterClient: NSObject {
     let accountType: ACAccountType!
     let urlSession = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
     
-    var feedViewController: FeedViewController!
-    var tweetViewController: TweetViewController!
+    var feedViewController: FeedViewController?
+    var tweetViewController: TweetViewController?
+    var profileViewController: ProfileViewController?
     
     var user: User?
     var statuses: [Status]?
@@ -67,6 +68,10 @@ class TwitterClient: NSObject {
             } else {
                 let userInfo = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary
                 self.user = User(dictionary: userInfo)
+                
+                if self.profileViewController != nil {
+                    self.profileViewController!.reload()
+                }
             }
         })
         task.resume()
