@@ -42,6 +42,10 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.parentViewController!.navigationItem.rightBarButtonItem = nil
     }
     
+    override func viewWillAppear(animated: Bool) {
+        self.parentViewController!.navigationItem.rightBarButtonItem = composeButton
+    }
+    
     func didTapCompose(sender: UIBarButtonItem) {
         self.performSegueWithIdentifier("composeViewSegue", sender: self)
     }
@@ -49,7 +53,6 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.parentViewController!.navigationItem.rightBarButtonItem = composeButton
         feedTableView.addSubview(refreshControl!)
         feedTableView.estimatedRowHeight = 100
         feedTableView.rowHeight = UITableViewAutomaticDimension
