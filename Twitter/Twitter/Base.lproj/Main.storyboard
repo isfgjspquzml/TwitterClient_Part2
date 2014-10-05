@@ -358,7 +358,7 @@
                                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="700" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LcX-ee-d8b">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="700" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LcX-ee-d8b">
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="bnc-sf-QaE"/>
                                                 </constraints>
@@ -513,6 +513,7 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="gQC-bj-qVc" appends="YES" id="037-Aa-GBq"/>
+                                    <outletCollection property="gestureRecognizers" destination="7tj-qk-Kvo" appends="YES" id="B2r-1A-ktQ"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -538,6 +539,11 @@
                 <swipeGestureRecognizer direction="right" id="gQC-bj-qVc">
                     <connections>
                         <action selector="contentViewSwiped:" destination="cTg-TL-Kn1" id="bNL-KG-Uy4"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="7tj-qk-Kvo">
+                    <connections>
+                        <action selector="contentViewSwipedLeft:" destination="cTg-TL-Kn1" id="9jY-bO-IhF"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>

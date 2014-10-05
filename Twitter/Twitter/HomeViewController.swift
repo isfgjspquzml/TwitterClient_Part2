@@ -28,22 +28,29 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         self.contentViewCenterX.constant = 0
-        self.activeViewController = viewControllers![2]
+        self.activeViewController = viewControllers![1]
     }
     
     @IBAction func didTapProfile(sender: UIButton) {
-        self.contentViewCenterX.constant = 0
+        closeMenu()
         self.activeViewController = viewControllers![0]
     }
     
     @IBAction func didTapTimeline(sender: UIButton) {
-        self.contentViewCenterX.constant = 0
+        closeMenu()
         self.activeViewController = viewControllers![1]
     }
     
     @IBAction func didTapMentions(sender: UIButton) {
-        self.contentViewCenterX.constant = 0
+        closeMenu()
         self.activeViewController = viewControllers![2]
+    }
+    
+    func closeMenu() {
+        UIView.animateWithDuration(0.4, animations: {
+            self.contentViewCenterX.constant = 0
+            self.view.layoutIfNeeded()
+        })
     }
     
     @IBAction func contentViewSwiped(sender: UISwipeGestureRecognizer) {
@@ -54,6 +61,16 @@ class HomeViewController: UIViewController {
             })
         }
     }
+    
+    @IBAction func contentViewSwipedLeft(sender: AnyObject) {
+        if sender.state == .Ended {
+            UIView.animateWithDuration(0.4, animations: {
+                self.contentViewCenterX.constant = 0
+                self.view.layoutIfNeeded()
+            })
+        }
+    }
+    
     
     var activeViewController: UIViewController? {
         didSet(oldViewControllerOrNil) {

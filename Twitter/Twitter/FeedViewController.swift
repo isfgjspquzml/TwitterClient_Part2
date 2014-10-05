@@ -14,10 +14,22 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var behindTintImageView: UIImageView!
     
     let dateFormater = NSDateFormatter()
+    var composeButton: UIBarButtonItem?
     var refreshControl: UIRefreshControl?
     
     override func loadView() {
         super.loadView()
+        
+        let rect = CGRectMake(0,0,20,20);
+        UIGraphicsBeginImageContext(rect.size);
+        UIImage(named: "compose.png").drawInRect(rect)
+        let resized = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        let imageData = UIImagePNGRepresentation(resized);
+        let newComposeImage = UIImage(data: imageData)
+        
+        composeButton = UIBarButtonItem(image: newComposeImage, style: .Plain, target: self, action: "didTapCompose:")
         
         TwitterClient.client.feedViewController = self
         
@@ -26,9 +38,18 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         refreshControl!.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        self.parentViewController!.navigationItem.rightBarButtonItem = nil
+    }
+    
+    func didTapCompose(sender: UIBarButtonItem) {
+        self.performSegueWithIdentifier("composeViewSegue", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.parentViewController!.navigationItem.rightBarButtonItem = composeButton
         feedTableView.addSubview(refreshControl!)
         feedTableView.estimatedRowHeight = 100
         feedTableView.rowHeight = UITableViewAutomaticDimension

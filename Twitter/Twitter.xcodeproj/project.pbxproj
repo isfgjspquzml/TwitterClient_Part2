@@ -27,6 +27,7 @@
 		89D687D019E0A88E001FC19A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D687CF19E0A88E001FC19A /* ProfileViewController.swift */; };
 		89D687D219E0A8A1001FC19A /* MentionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D687D119E0A8A1001FC19A /* MentionsViewController.swift */; };
 		89D687D419E0A912001FC19A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D687D319E0A912001FC19A /* HomeViewController.swift */; };
+		89D687D619E0BF36001FC19A /* compose.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D687D519E0BF36001FC19A /* compose.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		89D687CF19E0A88E001FC19A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		89D687D119E0A8A1001FC19A /* MentionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentionsViewController.swift; sourceTree = "<group>"; };
 		89D687D319E0A912001FC19A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		89D687D519E0BF36001FC19A /* compose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = compose.png; path = ../../../../Downloads/compose.png; sourceTree = "<group>"; };
 		8B527A5ECF3F4BA6A90E71AA /* libPods-Twitter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Twitter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5A670D870E432A947B3EC2 /* Pods-Twitter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter.xcconfig"; path = "Pods/Pods-Twitter.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,6 +190,7 @@
 		89D6879319D73BEA001FC19A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				89D687D519E0BF36001FC19A /* compose.png */,
 				89D6879419D73C00001FC19A /* behind_alert_view.png */,
 			);
 			name = Resources;
@@ -283,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89D687D619E0BF36001FC19A /* compose.png in Resources */,
 				89D6879519D73C00001FC19A /* behind_alert_view.png in Resources */,
 				8987663D19D3BA6C004F42C9 /* Main.storyboard in Resources */,
 				8987664219D3BA6C004F42C9 /* LaunchScreen.xib in Resources */,
