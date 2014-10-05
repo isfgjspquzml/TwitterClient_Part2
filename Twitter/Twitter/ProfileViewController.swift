@@ -39,14 +39,13 @@ class ProfileViewController: UIViewController {
         usernameLabel.text = "@" + user.username!
         locationLabel.text = user.location
         taglineLabel.text = user.tagLine
-        favoriteCount.text = user.favoritesCount
-        retweetCount.text = user.retweetCount
-        followersCount.text = user.followersCount
-        followingCount.text = user.following
+        favoriteCount.text = "Favorites: " + user.favoritesCount!
+        retweetCount.text = "Retweets: " + user.retweetCount!
+        followersCount.text = "Followers: " + user.followersCount!
+        followingCount.text = "Following: " + user.following!
     }
 
     override func loadView() {
         super.loadView()
-        self.view.backgroundColor = UIColor.lightGrayColor();
     }
 }
