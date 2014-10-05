@@ -25,9 +25,6 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         let user = TwitterClient.client.user!
-        println(TwitterClient.client.user!.profileBackgroundImage)
-        println(user)
-        println(backgroundImageView)
         
         backgroundImageView.image = TwitterClient.client.user!.profileBackgroundImage
         profileImageView.image = user.profileImage
@@ -43,8 +40,6 @@ class ProfileViewController: UIViewController {
 
     override func loadView() {
         super.loadView()
-        self.view = UIView(frame: CGRectZero)
-        self
         self.view.backgroundColor = UIColor.lightGrayColor();
     }
 }

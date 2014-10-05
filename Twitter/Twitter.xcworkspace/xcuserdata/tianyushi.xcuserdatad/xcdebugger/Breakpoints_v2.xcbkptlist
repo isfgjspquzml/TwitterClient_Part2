@@ -22,47 +22,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Twitter/ProfileViewController.swift"
-            timestampString = "434175842.813696"
+            filePath = "Twitter/TwitterClient.swift"
+            timestampString = "434176280.622131"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "updateUser()"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Twitter.ProfileViewController.viewDidLoad (Twitter.ProfileViewController)() -&gt; ()"
-                  moduleName = "Twitter"
-                  urlString = "file:///Users/tianyushi/Developer/TwitterClient/Twitter/Twitter/ProfileViewController.swift"
-                  timestampString = "434175842.816748"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "734">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Twitter.ProfileViewController.viewDidLoad (Twitter.ProfileViewController)() -&gt; ()"
-                  moduleName = "Twitter"
-                  urlString = "file:///Users/tianyushi/Developer/TwitterClient/Twitter/Twitter/ProfileViewController.swift"
-                  timestampString = "434175842.816913"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "854">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
