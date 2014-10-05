@@ -15,6 +15,7 @@ class MentionsViewController: UIViewController {
     }
 
     override func loadView() {
+        super.loadView()
         self.view = UIView(frame: CGRectZero)
         self.view.backgroundColor = UIColor.orangeColor();
     }
