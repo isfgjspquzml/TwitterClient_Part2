@@ -28,17 +28,20 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         self.contentViewCenterX.constant = 0
         self.activeViewController = viewControllers![1]
+        self.title = "Timeline"
     }
     
     @IBAction func didTapProfile(sender: UIButton) {
         closeMenu()
         self.activeViewController = viewControllers![0]
+//        self.title =  "My Profile"
     }
     
     @IBAction func didTapTimeline(sender: UIButton) {
         closeMenu()
         (self.viewControllers![1] as FeedViewController).showFeed = true
         (self.viewControllers![1] as FeedViewController).feedTableView.reloadData()
+        self.title = "Timeline"
         self.activeViewController = viewControllers![1]
     }
     
@@ -46,6 +49,7 @@ class HomeViewController: UIViewController {
         closeMenu()
         (self.viewControllers![1] as FeedViewController).showFeed = false
         (self.viewControllers![1] as FeedViewController).feedTableView.reloadData()
+        self.title =  "Mentions"
         self.activeViewController = viewControllers![1]
     }
     

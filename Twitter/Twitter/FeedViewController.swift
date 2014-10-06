@@ -54,12 +54,6 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if showFeed {
-            self.parentViewController?.navigationController?.title = "Timeline"
-        } else {
-            self.parentViewController?.navigationController?.title = "Mentions"
-        }
-        
         feedTableView.addSubview(refreshControl!)
         feedTableView.estimatedRowHeight = 100
         feedTableView.rowHeight = UITableViewAutomaticDimension

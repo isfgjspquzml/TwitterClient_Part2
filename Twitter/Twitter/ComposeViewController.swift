@@ -62,7 +62,6 @@ class ComposeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.title = "Compose a Tweet!"
         let user: User? = TwitterClient.client.user
         if user != nil {
             self.nameLabel.text = user!.name
