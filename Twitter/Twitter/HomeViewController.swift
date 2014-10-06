@@ -22,8 +22,7 @@ class HomeViewController: UIViewController {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let profileViewController = sb.instantiateViewControllerWithIdentifier("profileViewController") as UIViewController
         let feedViewController = sb.instantiateViewControllerWithIdentifier("feedViewController") as UIViewController
-        let mentionsViewController = sb.instantiateViewControllerWithIdentifier("mentionsViewController") as UIViewController
-        viewControllers = [profileViewController, feedViewController, mentionsViewController]
+        viewControllers = [profileViewController, feedViewController]
     }
     
     override func viewDidLoad() {
@@ -38,12 +37,16 @@ class HomeViewController: UIViewController {
     
     @IBAction func didTapTimeline(sender: UIButton) {
         closeMenu()
+        (self.viewControllers![1] as FeedViewController).showFeed = true
+        (self.viewControllers![1] as FeedViewController).feedTableView.reloadData()
         self.activeViewController = viewControllers![1]
     }
     
     @IBAction func didTapMentions(sender: UIButton) {
         closeMenu()
-        self.activeViewController = viewControllers![2]
+        (self.viewControllers![1] as FeedViewController).showFeed = false
+        (self.viewControllers![1] as FeedViewController).feedTableView.reloadData()
+        self.activeViewController = viewControllers![1]
     }
     
     func closeMenu() {

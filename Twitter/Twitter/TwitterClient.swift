@@ -27,7 +27,9 @@ class TwitterClient: NSObject {
     var profileViewController: ProfileViewController?
     
     var user: User?
+    var queriedUser: User?
     var statuses: [Status]?
+    var mentions: [Status]?
     var account: ACAccount?
     var storedTweet: String = ""
     var storedReplyTweet: String = ""
@@ -47,6 +49,7 @@ class TwitterClient: NSObject {
                 }
                 self.updateUser()
                 self.updateStatuses()
+                self.updateMentions()
             } else {
                 NSLog("Error: \(error)")
             }
@@ -107,6 +110,32 @@ class TwitterClient: NSObject {
         task.resume()
     }
     
+    func updateMentions() {
+        if account == nil {return}
+        let url = NSURL(string: "https://api.twitter.com/1.1/statuses/mentions_timeline.json")
+        let authRequest = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: .GET, URL: url, parameters: nil)
+        
+        authRequest.account = account
+        let request = authRequest.preparedURLRequest()
+        
+        let task = self.urlSession.dataTaskWithRequest(request, completionHandler: { (data, response, error) in
+            if error != nil {
+                NSLog("Error getting mentions")
+            } else {
+                let array = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSArray
+                var mentionsArray:[Status] = Array()
+                for object in array {
+                    let dictionary = object as NSDictionary
+                    mentionsArray.append((Status(dictionary: dictionary)))
+                }
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.mentions = mentionsArray
+                })
+            }
+        })
+        task.resume()
+    }
+    
     func tweetMessage(message: String, tweetID: Int?) {
         if account == nil {return}
         var params = NSMutableDictionary(object: message, forKey: "status")
@@ -147,7 +176,6 @@ class TwitterClient: NSObject {
                 NSLog("Error posting retweet")
             } else {
                 let dict = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary
-                println(dict)
 //                if retweeted == 0 {
 //                    let retweetId = dict["retweeted_status"]!["id"]! as Int
 //                    TwitterClient.client.statuses![row!].retweetId = retweetId
@@ -177,7 +205,26 @@ class TwitterClient: NSObject {
                 NSLog("Error favoriting tweet")
             } else {
                 let dict = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary
-                println(dict)
+            }
+        })
+        task.resume()
+    }
+    
+    func getUserTimeline(userId: String) {
+        if account == nil {return}
+        
+        let url = NSURL(string: "https://api.twitter.com/1.1/statuses/user_timeline.json")
+        let authRequest = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: .GET, URL: url, parameters: NSDictionary(object: userId, forKey: "user_id"))
+        
+        authRequest.account = account
+        let request = authRequest.preparedURLRequest()
+        
+        let task = self.urlSession.dataTaskWithRequest(request, completionHandler: {(data, response, error) in
+            if error != nil {
+                NSLog("Error getting user timeline")
+            } else {
+                let dict = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary
+                self.queriedUser = User(dictionary: dict)
             }
         })
         task.resume()

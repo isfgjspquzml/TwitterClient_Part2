@@ -664,24 +664,6 @@
             </objects>
             <point key="canvasLocation" x="1127" y="-1285"/>
         </scene>
-        <!--Mentions View Controller-->
-        <scene sceneID="lMB-Jb-2Jd">
-            <objects>
-                <viewController storyboardIdentifier="mentionsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Jhd-k0-2TD" customClass="MentionsViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OSS-fd-G7l"/>
-                        <viewControllerLayoutGuide type="bottom" id="LED-w1-0qM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3gx-Wa-8UK">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FbN-nl-8Dv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1775" y="-1361"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="m9W-nZ-asJ">
             <objects>

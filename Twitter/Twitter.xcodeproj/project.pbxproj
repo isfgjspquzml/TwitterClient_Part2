@@ -25,7 +25,6 @@
 		89D6879519D73C00001FC19A /* behind_alert_view.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D6879419D73C00001FC19A /* behind_alert_view.png */; };
 		89D6879719D79F74001FC19A /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D6879619D79F74001FC19A /* TweetViewController.swift */; };
 		89D687D019E0A88E001FC19A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D687CF19E0A88E001FC19A /* ProfileViewController.swift */; };
-		89D687D219E0A8A1001FC19A /* MentionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D687D119E0A8A1001FC19A /* MentionsViewController.swift */; };
 		89D687D419E0A912001FC19A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D687D319E0A912001FC19A /* HomeViewController.swift */; };
 		89D687D619E0BF36001FC19A /* compose.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D687D519E0BF36001FC19A /* compose.png */; };
 /* End PBXBuildFile section */
@@ -63,7 +62,6 @@
 		89D6879419D73C00001FC19A /* behind_alert_view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = behind_alert_view.png; path = ../../../../Desktop/behind_alert_view.png; sourceTree = "<group>"; };
 		89D6879619D79F74001FC19A /* TweetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetViewController.swift; sourceTree = "<group>"; };
 		89D687CF19E0A88E001FC19A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		89D687D119E0A8A1001FC19A /* MentionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentionsViewController.swift; sourceTree = "<group>"; };
 		89D687D319E0A912001FC19A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		89D687D519E0BF36001FC19A /* compose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = compose.png; path = ../../../../Downloads/compose.png; sourceTree = "<group>"; };
 		8B527A5ECF3F4BA6A90E71AA /* libPods-Twitter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Twitter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,7 +115,6 @@
 				8987665B19D3C1AD004F42C9 /* StatusTableViewCell.swift */,
 				89D6879619D79F74001FC19A /* TweetViewController.swift */,
 				89D687CF19E0A88E001FC19A /* ProfileViewController.swift */,
-				89D687D119E0A8A1001FC19A /* MentionsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -346,7 +343,6 @@
 				8987663819D3BA6C004F42C9 /* AppDelegate.swift in Sources */,
 				89D687D019E0A88E001FC19A /* ProfileViewController.swift in Sources */,
 				8987666219D543EC004F42C9 /* TwitterClient.swift in Sources */,
-				89D687D219E0A8A1001FC19A /* MentionsViewController.swift in Sources */,
 				8987665E19D3C3A3004F42C9 /* Status.swift in Sources */,
 				89D6879719D79F74001FC19A /* TweetViewController.swift in Sources */,
 				89D687D419E0A912001FC19A /* HomeViewController.swift in Sources */,

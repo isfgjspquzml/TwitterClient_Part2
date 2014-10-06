@@ -46,6 +46,5 @@ class User: NSObject {
         if err == nil {
             self.profileBackgroundImage = UIImage(data: backgroundImageData)
         }
-        println(self.profileBackgroundImage)
     }
 }

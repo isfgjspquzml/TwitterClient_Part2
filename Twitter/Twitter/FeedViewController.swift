@@ -16,6 +16,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let dateFormater = NSDateFormatter()
     var composeButton: UIBarButtonItem?
     var refreshControl: UIRefreshControl?
+    var showFeed = true
     
     override func loadView() {
         super.loadView()
@@ -53,6 +54,12 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if showFeed {
+            self.parentViewController?.navigationController?.title = "Timeline"
+        } else {
+            self.parentViewController?.navigationController?.title = "Mentions"
+        }
+        
         feedTableView.addSubview(refreshControl!)
         feedTableView.estimatedRowHeight = 100
         feedTableView.rowHeight = UITableViewAutomaticDimension
@@ -76,14 +83,22 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = feedTableView.dequeueReusableCellWithIdentifier("statusCell") as StatusTableViewCell
-        let status = TwitterClient.client.statuses![indexPath.row]
+        var status: Status
+        if showFeed {
+            status = TwitterClient.client.statuses![indexPath.row]
+        } else {
+            status = TwitterClient.client.mentions![indexPath.row]
+        }
+        
         cell.status = status
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if TwitterClient.client.statuses?.count > 0 {
+        if showFeed && TwitterClient.client.statuses?.count > 0 {
             return TwitterClient.client.statuses!.count
+        } else if !showFeed && TwitterClient.client.mentions?.count > 0 {
+            return TwitterClient.client.mentions!.count
         } else {
             return 0
         }
