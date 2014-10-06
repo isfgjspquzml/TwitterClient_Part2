@@ -84,8 +84,23 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             status = TwitterClient.client.mentions![indexPath.row]
         }
         
+        let tap = NamedUITapGestureRecognizer(target: self, action: "didTapProfileImageView:")
+        tap.username = status.username
+        
+        cell.userImageView.addGestureRecognizer(tap)
+        cell.userImageView.userInteractionEnabled = true
+        
         cell.status = status
         return cell
+    }
+    
+    func didTapProfileImageView(sender: NamedUITapGestureRecognizer) {
+        TwitterClient.client.getUserProfile(sender.username!)
+        let parent = self.parentViewController as HomeViewController
+        let profileViewController = parent.viewControllers![0] as ProfileViewController
+        
+        parent.activeViewController = profileViewController
+        parent.title = sender.username!
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -27,6 +27,7 @@
 		89D687D019E0A88E001FC19A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D687CF19E0A88E001FC19A /* ProfileViewController.swift */; };
 		89D687D419E0A912001FC19A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D687D319E0A912001FC19A /* HomeViewController.swift */; };
 		89D687D619E0BF36001FC19A /* compose.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D687D519E0BF36001FC19A /* compose.png */; };
+		89D687DA19E26E2E001FC19A /* NamedUITapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D687D919E26E2E001FC19A /* NamedUITapGestureRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		89D687CF19E0A88E001FC19A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		89D687D319E0A912001FC19A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		89D687D519E0BF36001FC19A /* compose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = compose.png; path = ../../../../Downloads/compose.png; sourceTree = "<group>"; };
+		89D687D919E26E2E001FC19A /* NamedUITapGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamedUITapGestureRecognizer.swift; sourceTree = "<group>"; };
 		8B527A5ECF3F4BA6A90E71AA /* libPods-Twitter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Twitter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5A670D870E432A947B3EC2 /* Pods-Twitter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter.xcconfig"; path = "Pods/Pods-Twitter.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +104,7 @@
 			children = (
 				8987665D19D3C3A3004F42C9 /* Status.swift */,
 				89494DB719D72A1D0054B5FE /* User.swift */,
+				89D687D919E26E2E001FC19A /* NamedUITapGestureRecognizer.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				8987665E19D3C3A3004F42C9 /* Status.swift in Sources */,
 				89D6879719D79F74001FC19A /* TweetViewController.swift in Sources */,
 				89D687D419E0A912001FC19A /* HomeViewController.swift in Sources */,
+				89D687DA19E26E2E001FC19A /* NamedUITapGestureRecognizer.swift in Sources */,
 				89494DAF19D545A80054B5FE /* FeedViewController.swift in Sources */,
 				89494DB819D72A1D0054B5FE /* User.swift in Sources */,
 				89D6879219D73B4E001FC19A /* ComposeViewController.swift in Sources */,

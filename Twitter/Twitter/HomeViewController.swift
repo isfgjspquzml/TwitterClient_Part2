@@ -33,8 +33,10 @@ class HomeViewController: UIViewController {
     
     @IBAction func didTapProfile(sender: UIButton) {
         closeMenu()
+        (self.viewControllers![0] as ProfileViewController).showSelf = true
+        (self.viewControllers![0] as ProfileViewController).reload()
+        self.title = TwitterClient.client.user?.username
         self.activeViewController = viewControllers![0]
-//        self.title =  "My Profile"
     }
     
     @IBAction func didTapTimeline(sender: UIButton) {
@@ -78,7 +80,6 @@ class HomeViewController: UIViewController {
         }
     }
     
-    
     var activeViewController: UIViewController? {
         didSet(oldViewControllerOrNil) {
             if let oldVC = oldViewControllerOrNil {
@@ -92,7 +93,11 @@ class HomeViewController: UIViewController {
                 newVC.view.frame = self.contentView.bounds
                 self.contentView.addSubview(newVC.view)
                 newVC.didMoveToParentViewController(self)
+                if newVC == self.viewControllers![0] {
+                    (newVC as ProfileViewController).reload()
+                }
             }
+            self.view.layoutIfNeeded()
         }
     }
 }

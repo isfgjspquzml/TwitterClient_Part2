@@ -210,11 +210,11 @@ class TwitterClient: NSObject {
         task.resume()
     }
     
-    func getUserTimeline(userId: String) {
+    func getUserProfile(screenName: String) {
         if account == nil {return}
         
-        let url = NSURL(string: "https://api.twitter.com/1.1/statuses/user_timeline.json")
-        let authRequest = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: .GET, URL: url, parameters: NSDictionary(object: userId, forKey: "user_id"))
+        let url = NSURL(string: "https://api.twitter.com/1.1/users/show.json")
+        let authRequest = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: .GET, URL: url, parameters: NSDictionary(object: screenName, forKey: "screen_name"))
         
         authRequest.account = account
         let request = authRequest.preparedURLRequest()
@@ -225,6 +225,8 @@ class TwitterClient: NSObject {
             } else {
                 let dict = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary
                 self.queriedUser = User(dictionary: dict)
+                self.profileViewController!.showSelf = false
+                self.profileViewController!.reload()
             }
         })
         task.resume()

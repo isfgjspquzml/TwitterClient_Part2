@@ -209,6 +209,11 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="29f-nw-mHl">
                                                     <rect key="frame" x="8" y="29" width="60" height="60"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
+                                                        <bool key="isElement" value="YES"/>
+                                                    </accessibility>
+                                                    <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="29f-nw-mHl" secondAttribute="height" multiplier="1:1" id="FmR-aL-oEd"/>
                                                         <constraint firstAttribute="height" constant="60" id="Ino-Ka-dZS"/>
@@ -562,7 +567,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sKY-uv-SLv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1115" y="-1978"/>
+            <point key="canvasLocation" x="305" y="-604"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="gjB-Cw-FtS">
